@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:kulup_flow/KayitSayfasi.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -20,9 +21,15 @@ class _LoginState extends State<Login> {
   @override
   void initState() {
     super.initState();
-    _kayitTapRecognizer = TapGestureRecognizer()..onTap =() {
-      print("Kayıt ol Tıklandı.");
-    };
+    _kayitTapRecognizer = TapGestureRecognizer()
+      ..onTap = () {
+        print("KAYIT OL TIKLANDI!");
+
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => KayitSayfasi()),
+        );
+      };
   }
 
   @override

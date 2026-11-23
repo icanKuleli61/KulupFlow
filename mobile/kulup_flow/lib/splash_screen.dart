@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kulup_flow/login.dart';
 
 class MySplashScreen extends StatefulWidget {
   @override
@@ -45,7 +46,7 @@ class _MySplashScreen extends State<MySplashScreen>
 
     _controller.addStatusListener((status) {
       if(status ==  AnimationStatus.completed){
-        print("Animasyon bitti");
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Login()));
       }
     },);
     _controller.forward();

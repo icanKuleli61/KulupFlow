@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kulup_flow/KayitSayfasi.dart';
+import 'package:kulup_flow/mainNavigator.dart';
 import 'package:kulup_flow/splash_screen.dart';
 import 'package:kulup_flow/login.dart';
 
@@ -30,7 +32,7 @@ class KlupFlowApp extends StatelessWidget {
           bodyMedium: TextStyle(fontSize: 14),
         ),
       ),
-      home: Login(),
+      home: MainNavigator(),
     );
   }
 }
